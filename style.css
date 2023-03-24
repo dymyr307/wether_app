@@ -1,0 +1,56 @@
+/* body {
+    background-image: url('../kiev.png') !important;
+
+} */
+
+/* .row>.pricing-table {
+    margin: 50% 0 0 50%;
+}
+ .pricing-table .package.featured .package-name {
+    color: #1250e2;
+}
+
+*/
+
+
+body:has(.featured) {
+    background: rgb(244, 244, 241);
+}
+
+.text-center {
+    text-align: center;
+}
+
+select {
+    margin: 10px 0 40px;
+    min-width: 155px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+button {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: green;
+}
+
+.buttons {
+    margin-bottom: 0;
+}
+
+.features:has(li) {
+    margin-bottom: -40px;
+}
+
+img {
+    filter: drop-shadow(5px 5px 5px rgb(34, 34, 34));
+}
+
+.time {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
