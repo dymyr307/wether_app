@@ -50,7 +50,7 @@ function showWeather(weather) {
 
    document.querySelector('.fahrenheit').addEventListener('click', function () {
       document.querySelector('.price').innerHTML =
-         Math.round(weather.main.temp) * 1.8 + 32 + '&#8457;';
+         Math.round(weather.main.temp * 1.8 + 32) + '&#8457;';
    });
    //!
    const timezoneOffset = weather.timezone;
@@ -61,6 +61,16 @@ function showWeather(weather) {
       hour: '2-digit',
       minute: '2-digit',
    });
+   /*
+   function convertTime(unixTime, timeZone) {
+  let timezoneOffset = new Date().getTimezoneOffset() * 60;
+  let date = new Date((unixTime + timezoneOffset + timeZone) * 1000);
+  let hours = date.getHours();
+  let minutes = "0" + date.getMinutes();
+  let time = hours + ":" + minutes.slice(-2);
+  return time;
+}
+   */
    //? console.log(`formattedTime`, formattedTime);
 
    document.querySelector('.time').innerText = formattedTime;
